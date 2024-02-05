@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Root Calculator</title>
+</head>
+<body>
+    <h1>Cube Roots of Numbers 1 to 10</h1>
+    <ul id="resultList"></ul>
+    <script>
+        function calculateCubeRoots(numbers) {
+            var resultList = document.getElementById("resultList");
+
+            for (var i = 0; i < numbers.length; i++) {
+                var cubeRoot = Math.cbrt(numbers[i]);
+                var listItem = document.createElement("li");
+                listItem.textContent = "Cube root of " + numbers[i] + ": " + cubeRoot.toFixed(4);
+                resultList.appendChild(listItem);
+            }
+        }
+
+        // Create an array with numbers from 1 to 10
+        var numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // Call the function with the array
+        calculateCubeRoots(numberArray);
+    </script>
+</body>
+</html>
